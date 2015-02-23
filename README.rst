@@ -19,18 +19,61 @@ Baseline
 --------
 
 There are -more or less- official `conventions <http://docs.saltstack.com/en/latest/topics/development/conventions/formulas.html>`_ and
-`best practices <http://docs.saltstack.com/en/latest/topics/best_practices.html>` described in the SaltStack documentation. However in my
-humble opinion (IMHO) some of those suggestions and convention rules are, based on my long-time experiences with Salt, not suitable for practical use.
+`best practices <http://docs.saltstack.com/en/latest/topics/best_practices.html>`_ described in the SaltStack documentation. However in my
+humble opinion (IMHO) some of those suggestions and conventions are, based on my long-time experiences with Salt, not suitable for practical use.
 
-This document describes my deviations that have proven to be useful for me. Everyone is invited to discuss about it.
+This document describes my formula standardisation that have proven to be useful for me. Everyone is invited to discuss about it.
 
-Most of formulas at https://github.com/search?q=user%3Abechtoldt+-formula are created based on the guidelines of this document.
+Most of the formulas at https://github.com/search?q=user%3Abechtoldt+-formula are created based on the guidelines of this document.
 
 
 Files & Directories
 -------------------
 
-FIXME
+Example
+'''''''
+
+Directory listing of https://github.com/bechtoldt/saltstack-template-formula:
+
+::
+
+    $ tree -I '.git' --matchdirs
+    .
+    |-- .gitignore
+    |-- LICENSE
+    |-- README.rst
+    |-- contrib/
+    |   |-- LICENSE
+    |   `-- files/
+    |       `-- template.conf
+    |-- pillar.example.sls
+    `-- template/
+        |-- defaults.yaml
+        `-- init.sls
+
+
+dotfiles
+''''''''
+
+``.gitignore``: Ignores most of the files you don't want to have in your Git repository (editor files, binaries, etc.)
+
+
+LICENSE files
+'''''''''''''
+
+Contains license information and terms & conditions how you are allowed to use and distribute the files of the underlying directories.
+
+
+contrib directory
+'''''''''''''''''
+
+Contains files that are contributed by users that aren't maintained by the formulas' author.
+
+
+SLS directory
+'''''''''''''
+
+A directory that contains the actual Salt state files (SLS). This directory will be read by Salt master and minions for configuration management.
 
 
 Version Control & Release Management

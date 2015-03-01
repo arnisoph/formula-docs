@@ -37,43 +37,51 @@ Directory listing of https://github.com/bechtoldt/saltstack-template-formula:
 
 ::
 
-    $ tree -I '.git' --matchdirs
+    $ tree -I '.git|.vagrant|.*\.swp|\.env' --matchdirs
     .
     |-- .gitignore
+    |-- AUTHORS
     |-- LICENSE
     |-- README.rst
+    |-- _grains/
+    |-- _modules/
     |-- contrib/
     |   |-- LICENSE
-    |   `-- files/
-    |       `-- template.conf
-    |-- pillar.example.sls
-    `-- template/
-        |-- defaults.yaml
-        `-- init.sls
+    |   `-- states/
+    |       `-- files/
+    |           `-- template.conf
+    |-- pillar/
+    |   |-- init.sls
+    |   `-- minimal.sls
+    |-- states/
+    |   |-- defaults.yaml
+    |   |-- py.sls
+    |   `-- yaml_jinja.sls
+    |-- update-docs*
+    `-- vagrant/
+        |-- .env.dist
+        |-- Vagrantfile
+        `-- setenv.sh
 
+Explanation
+'''''''''''
 
-dotfiles
-''''''''
+Files
+'''''
 
-``.gitignore``: Ignores most of the files you don't want to have in your Git repository (editor files, binaries, etc.)
+``AUTHORS``: Contains an auto-generated list of contributors
+``LICENSE``: Contains license information and terms & conditions how you are allowed to use and distribute the files of the underlying directories.
+``update-docs``: A shell script that auto-generates formula metadata files and more
 
+Directories
+'''''''''''
 
-LICENSE files
-'''''''''''''
-
-Contains license information and terms & conditions how you are allowed to use and distribute the files of the underlying directories.
-
-
-contrib directory
-'''''''''''''''''
-
-Contains files that are contributed by users that aren't maintained by the formulas' author.
-
-
-SLS directory
-'''''''''''''
-
-A directory that contains the actual Salt state files (SLS). This directory will be read by Salt master and minions for configuration management.
+``_grains``: Contains custom grain modules that are used by Salt minions
+``_modules``: Contains custom execution modules that are used by Salt minions
+``contrib``: Contains files that are contributed by users that aren't maintained by the formulas' author.
+``pillar``: Contains pillar example files that could be used for formula testing, too. This directory will be read by Salt master and minions for configuration management.
+``states``: Contains the actual Salt state files. This directory will be read by Salt master and minions for configuration management.
+``vagrant``: Contains an example Vagrant environment
 
 
 Version Control & Release Management

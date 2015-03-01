@@ -112,3 +112,9 @@ Using Formulas
 --------------
 
 FIXME
+
+
+LICENSE
+-------
+
+This document is published under the terms of `CC BY-SA 4.0 <http://creativecommons.org/licenses/by-sa/4.0/>`_

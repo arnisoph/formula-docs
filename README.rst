@@ -66,15 +66,13 @@ Directory listing of https://github.com/bechtoldt/saltstack-template-formula:
 Explanation
 '''''''''''
 
-Files
-'''''
+Files:
 
 ``AUTHORS``: Contains an auto-generated list of contributors
 ``LICENSE``: Contains license information and terms & conditions how you are allowed to use and distribute the files of the underlying directories.
 ``update-docs``: A shell script that auto-generates formula metadata files and more
 
-Directories
-'''''''''''
+Directories:
 
 ``_grains``: Contains custom grain modules that are used by Salt minions
 ``_modules``: Contains custom execution modules that are used by Salt minions

@@ -74,19 +74,20 @@ Files:
 
 ``update-docs``: A shell script that auto-generates formula metadata files and more
 
+
 Directories:
 
-``_grains``: Contains custom grain modules that are used by Salt minions
+``_grains/``: Contains custom grain modules that are used by Salt minions
 
-``_modules``: Contains custom execution modules that are used by Salt minions
+``_modules/``: Contains custom execution modules that are used by Salt minions
 
-``contrib``: Contains files that are contributed by users that aren't maintained by the formulas' author.
+``contrib/``: Contains files that are contributed by users that aren't maintained by the formulas' author.
 
-``pillar``: Contains pillar example files that could be used for formula testing, too. This directory will be read by Salt master and minions for configuration management.
+``pillar/``: Contains pillar example files that could be used for formula testing, too. This directory will be read by Salt master and minions for configuration management.
 
-``states``: Contains the actual Salt state files. This directory will be read by Salt master and minions for configuration management.
+``states/``: Contains the actual Salt state files. This directory will be read by Salt master and minions for configuration management.
 
-``vagrant``: Contains an example Vagrant environment
+``vagrant/``: Contains an example Vagrant environment
 
 
 Version Control & Release Management

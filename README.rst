@@ -33,7 +33,7 @@ Files & Directories
 Example
 '''''''
 
-Directory listing of https://github.com/bechtoldt/saltstack-template-formula:
+Directory listing of https://github.com/bechtoldt/saltstack-skeleton-formula:
 
 ::
 
@@ -87,7 +87,7 @@ Directories:
 
 ``states/``: Contains the actual Salt state files. This directory will be read by Salt master and minions for configuration management.
 
-``vagrant/``: Contains an example Vagrant environment
+``vagrant/``: Contains an example Vagrant environment.
 
 
 Version Control & Release Management
@@ -117,4 +117,4 @@ FIXME
 LICENSE
 -------
 
-This document is published under the terms of `CC BY-SA 4.0 <http://creativecommons.org/licenses/by-sa/4.0/>`_
+This document is published under the terms of `CC BY-SA 4.0 <http://creativecommons.org/licenses/by-sa/4.0/>`_.

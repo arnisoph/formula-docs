@@ -91,7 +91,7 @@ Directories:
 
 ``contrib/``: Contains files that are contributed by users that aren't maintained by the formulas' author.
 
-``pillar/``: Contains pillar examples that can be used for formula testing. This directory will be read by Salt master and minions for configuration management. Do *NEVER* store any sensitive data in this directory since it's meant to become published when submitting a pull request. (TODO: explain file (names))
+``pillar/``: Contains pillar examples that can be used for formula testing. This directory will be read by Salt master and minions for configuration management. Do *NEVER* store *ANY* sensitive data in this directory since it's meant to become published when submitting a pull request. (TODO: explain file (names))
 
 ``states/``: Contains the actual Salt state files. This directory will be read by Salt master and minions for configuration management.
 

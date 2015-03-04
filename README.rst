@@ -37,31 +37,35 @@ Directory listing of https://github.com/bechtoldt/saltstack-skeleton-formula:
 
 ::
 
-    $ tree -I '.git|.vagrant|.*\.swp|\.env' --matchdirs
+    $ tree -I '.git|.vagrant|.*\.swp' --matchdirs
     .
     |-- .gitignore
+    |-- .gitmodules
     |-- AUTHORS
     |-- LICENSE
     |-- README.rst
     |-- _grains/
     |-- _modules/
+    |-- _states/
     |-- contrib/
     |   |-- LICENSE
     |   `-- states/
     |       `-- files/
     |           `-- template.conf
     |-- pillar/
-    |   |-- init.sls
-    |   `-- minimal.sls
+    |   |-- client.sls
+    |   |-- minimal.sls
+    |   |-- server.sls
+    |   `-- special.sls
     |-- states/
     |   |-- defaults.yaml
     |   |-- py.sls
     |   `-- yaml_jinja.sls
     |-- update-docs*
     `-- vagrant/
-        |-- .env.dist
-        |-- Vagrantfile
-        `-- setenv.sh
+        |-- nodes/
+        |-- nodes.yaml
+        `-- nodes.yaml.dist
 
 Explanation
 '''''''''''
@@ -72,6 +76,8 @@ Files:
 
 ``LICENSE``: Contains license information and terms & conditions how you are allowed to use and distribute the files of the underlying directories.
 
+``README``: TODO
+
 ``update-docs``: A shell script that auto-generates formula metadata files and more
 
 
@@ -81,13 +87,15 @@ Directories:
 
 ``_modules/``: Contains custom execution modules that are used by Salt minions
 
+``_states/``: TODO
+
 ``contrib/``: Contains files that are contributed by users that aren't maintained by the formulas' author.
 
-``pillar/``: Contains pillar example files that could be used for formula testing, too. This directory will be read by Salt master and minions for configuration management.
+``pillar/``: Contains pillar examples that can be used for formula testing. This directory will be read by Salt master and minions for configuration management. Do *NEVER* store any sensitive data in this directory since it's meant to become published when submitting a pull request. (TODO: explain file (names))
 
 ``states/``: Contains the actual Salt state files. This directory will be read by Salt master and minions for configuration management.
 
-``vagrant/``: Contains an example Vagrant environment.
+``vagrant/``: Contains a Vagrant setup. The nodes subdirectory is a Git submodule (repository) that holds a generic `Vagrant box & provision scripts <https://github.com/bechtoldt/iac-vagrant>`_. The local file ``vagrant/nodes.yaml`` can be used to configure your Vagrant box.
 
 
 Version Control & Release Management
@@ -111,7 +119,7 @@ FIXME
 Using Formulas
 --------------
 
-FIXME
+FIXME (TODO: git clone --recursive)
 
 
 LICENSE

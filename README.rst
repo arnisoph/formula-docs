@@ -62,8 +62,8 @@ Directory listing of https://github.com/bechtoldt/saltstack-skeleton-formula:
     |   |-- py.sls
     |   `-- yaml_jinja.sls
     |-- update-docs*
-    `-- vagrant/
-        |-- nodes/
+    `-- test/
+        |-- vagrant/
         |-- nodes.yaml
         `-- nodes.yaml.dist
 
@@ -95,7 +95,7 @@ Directories:
 
 ``states/``: Contains the actual Salt state files. This directory will be read by Salt master and minions for configuration management.
 
-``vagrant/``: Contains a Vagrant setup. The nodes subdirectory is a Git submodule (repository) that holds a generic `Vagrant box & provision scripts <https://github.com/bechtoldt/iac-vagrant>`_. The local file ``vagrant/nodes.yaml`` can be used to configure your Vagrant box.
+``test/``: Contains a Vagrant-based development and test environment. The vagrant subdirectory is a Git submodule (repository) that holds a generic `Vagrant box & provision scripts <https://github.com/bechtoldt/iac-vagrant>`_. The local file ``test/nodes.yaml`` can be used to configure your Vagrant box.
 
 
 Version Control & Release Management

@@ -126,3 +126,8 @@ LICENSE
 -------
 
 This document is published under the terms of `CC BY-SA 4.0 <http://creativecommons.org/licenses/by-sa/4.0/>`_.
+
+
+.. image:: https://badges.gitter.im/Join%20Chat.svg
+   :alt: Join the chat at https://gitter.im/bechtoldt/formula-docs
+   :target: https://gitter.im/bechtoldt/formula-docs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge

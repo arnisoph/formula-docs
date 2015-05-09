@@ -101,7 +101,7 @@ Directories:
 Version Control & Release Management
 ------------------------------------
 
-FIXME
+FIXME: branches
 
 
 Security Considerations
@@ -119,10 +119,12 @@ FIXME
 Using Formulas
 --------------
 
-FIXME (TODO: git clone --recursive)
+FIXME (TODO: git clone git@github.com:bechtoldt/saltstack-skeleton-formula.git vagrant --recursive)
 
 
 LICENSE
 -------
 
 This document is published under the terms of `CC BY-SA 4.0 <http://creativecommons.org/licenses/by-sa/4.0/>`_.
+
+todo: pillar naming

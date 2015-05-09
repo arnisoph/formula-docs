@@ -8,6 +8,10 @@ formula-docs
 .. image:: https://api.flattr.com/button/flattr-badge-large.png
     :target: https://flattr.com/submit/auto?user_id=bechtoldt&url=https%3A%2F%2Fgithub.com%2Fbechtoldt%2Fformula-docs
 
+.. image:: https://badges.gitter.im/Join%20Chat.svg
+   :alt: Join the chat at https://gitter.im/bechtoldt/formula-docs
+   :target: https://gitter.im/bechtoldt/formula-docs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+
 Documentation and Standardisation of SaltStack formulas
 
 .. contents::

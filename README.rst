@@ -2,15 +2,21 @@
 formula-docs
 ============
 
-.. image:: http://img.shields.io/github/tag/bechtoldt/formula-docs.svg
-    :target: https://github.com/bechtoldt/formula-docs/tags
+.. image:: https://img.shields.io/badge/flattr-donate-red.svg
+    :alt: Donate via flattr
+    :target: https://flattr.com/profile/bechtoldt
 
-.. image:: https://api.flattr.com/button/flattr-badge-large.png
-    :target: https://flattr.com/submit/auto?user_id=bechtoldt&url=https%3A%2F%2Fgithub.com%2Fbechtoldt%2Fformula-docs
+.. image:: https://img.shields.io/gratipay/bechtoldt.svg
+    :alt: Donate via Gratipay
+    :target: https://www.gratipay.com/bechtoldt/
 
-.. image:: https://badges.gitter.im/Join%20Chat.svg
-   :alt: Join the chat at https://gitter.im/bechtoldt/formula-docs
-   :target: https://gitter.im/bechtoldt/formula-docs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+.. image:: https://img.shields.io/badge/license-CC--BY--SA--4.0-blue.svg
+    :alt: CC-BY-SA-4.0
+    :target: http://creativecommons.org/licenses/by-sa/4.0/
+
+.. image:: https://img.shields.io/badge/gitter-chat-brightgreen.svg
+    :alt: Join Chat
+    :target: https://gitter.im/bechtoldt/formula-docs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 
 Documentation and Standardisation of SaltStack formulas
 
@@ -41,11 +47,11 @@ Directory listing of https://github.com/bechtoldt/saltstack-skeleton-formula:
 
 ::
 
-    $ tree -I '.git|.vagrant|.*\.swp' --matchdirs
+    $ tree -I '.git|.vagrant|.*\.swp' --matchdirs -L 2
     .
     |-- .gitignore
     |-- .gitmodules
-    |-- AUTHORS
+    |-- CHANGELOG.rst
     |-- LICENSE
     |-- README.rst
     |-- _grains/
@@ -54,8 +60,7 @@ Directory listing of https://github.com/bechtoldt/saltstack-skeleton-formula:
     |-- contrib/
     |   |-- LICENSE
     |   `-- states/
-    |       `-- files/
-    |           `-- template.conf
+    |-- meta.yaml
     |-- pillar_examples/
     |   |-- client.sls
     |   |-- minimal.sls
@@ -65,41 +70,34 @@ Directory listing of https://github.com/bechtoldt/saltstack-skeleton-formula:
     |   |-- defaults.yaml
     |   |-- py.sls
     |   `-- yaml_jinja.sls
-    |-- update-docs*
     `-- test/
-        |-- vagrant/
         |-- nodes.yaml
-        `-- nodes.yaml.dist
+        |-- nodes.yaml.dist
+        |-- shared/
+        `-- vagrant/
 
 Explanation
 '''''''''''
 
-Files:
-
-``AUTHORS``: Contains an auto-generated list of contributors
+``CHANGELOG.rst``: Contains a brief change log about important changes that are part of new releases.
 
 ``LICENSE``: Contains license information and terms & conditions how you are allowed to use and distribute the files of the underlying directories.
 
-``README``: TODO
+``README.rst``: May contain instructions how to use the formula, compatiblity information, dependencies, TODOs, a list of contributors and links for further information. Adding a list of available states or code documentaiton tend to date out. Better spend some time making your code easy to read and add some comments for complex statements.
 
-``update-docs``: A shell script that auto-generates formula metadata files and more
+``_grains/``: Contains custom grain modules that are used by Salt.
 
+``_modules/``: Contains custom execution modules that are used by Salt.
 
-Directories:
+``_states/``: Contains custom state modules that are used by Salt.
 
-``_grains/``: Contains custom grain modules that are used by Salt minions
+``contrib/``: Contains files that are contributed by users that aren't maintained by the formulas' author(s)/ maintainer.
 
-``_modules/``: Contains custom execution modules that are used by Salt minions
-
-``_states/``: TODO
-
-``contrib/``: Contains files that are contributed by users that aren't maintained by the formulas' author.
-
-``pillar_examples/``: Contains pillar examples that can be used for formula testing. This directory will be read by Salt master and minions for configuration management. Do *NEVER* store *ANY* sensitive data in this directory since it's meant to become published when submitting a pull request. (TODO: explain file (names))
+``pillar_examples/``: Contains pillar examples that can be used for formula testing. This directory will be read by Salt master and minions for configuration management. Do *NEVER* store *ANY* sensitive data in this directory since it's meant to become published when submitting a pull request.
 
 ``states/``: Contains the actual Salt state files. This directory will be read by Salt master and minions for configuration management.
 
-``test/``: Contains a Vagrant-based development and test environment. The vagrant subdirectory is a Git submodule (repository) that holds a generic `Vagrant box & provision scripts <https://github.com/bechtoldt/iac-vagrant>`_. The local file ``test/nodes.yaml`` can be used to configure your Vagrant box.
+``test/``: Contains a Vagrant-based or any other development and test environment. The Vagrant subdirectory is a Git submodule (repository) that holds a generic `Vagrant box & provision scripts <https://github.com/bechtoldt/iac-vagrant>`_. The local file ``test/nodes.yaml`` can be used to configure your Vagrant box.
 
 
 Version Control & Release Management
@@ -123,12 +121,12 @@ FIXME
 Using Formulas
 --------------
 
-FIXME (TODO: git clone git@github.com:bechtoldt/saltstack-skeleton-formula.git vagrant --recursive)
+FIXME (TODO: git clone git@github.com:bechtoldt/saltstack-skeleton-formula.git vagrant --recursive, vcs-gather)
 
 
 LICENSE
 -------
 
-This document is published under the terms of `CC BY-SA 4.0 <http://creativecommons.org/licenses/by-sa/4.0/>`_.
+This document is published under the terms of `CC-BY-SA-4.0 <http://creativecommons.org/licenses/by-sa/4.0/>`_.
 
 todo: pillar naming

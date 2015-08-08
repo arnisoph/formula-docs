@@ -103,7 +103,9 @@ Explanation
 Version Control & Release Management
 ------------------------------------
 
-A concept of managing code in a VCS (Version Control System) would be having a *master*/*develop* branch containing the latest state of the formula code. Separate branches keep support for older Salt releases. So could create the branch of the master branch and name it ``2015.8`` when you plan to introduce changes in the master branch that require a newer version. One could backport fixes and features to these *LTS*/*support release* branches, just like the `SaltStack upstream project <https://github.com/saltstack/salt/blob/develop/doc/topics/development/conventions/release.rst>`_ is doing. A file called ``CHANGELOG.rst`` SHOULD
+A concept of managing code in a VCS (Version Control System) would be having a *master*/*develop* branch containing the latest state of the formula code. Separate branches keep support for older Salt releases. So could create the branch of the master branch and name it ``2015.8`` when you plan to introduce changes in the master branch that require a newer version. One could backport fixes and features to these *LTS*/*support release* branches, just like the `SaltStack upstream project <https://github.com/saltstack/salt/blob/develop/doc/topics/development/conventions/release.rst>`_ is doing. A file called ``CHANGELOG.rst`` SHOULD contain change and release notes. Release tags MAY be created to release a version of the formula. Git tags can be used to define a specific version of the Git branch in Salt.
+
+**FIXME** add information how to compile formulas
 
 
 Security Considerations
@@ -115,13 +117,13 @@ As mentioned above, never commit changes that include private passwords or keys 
 Contributing
 ------------
 
-FIXME
+**FIXME**
 
 
 Using Formulas
 --------------
 
-FIXME (TODO: git clone git@github.com:bechtoldt/saltstack-skeleton-formula.git vagrant --recursive, vcs-gather)
+**FIXME** (TODO: git clone git@github.com:bechtoldt/saltstack-skeleton-formula.git vagrant --recursive, vcs-gather)
 
 
 LICENSE

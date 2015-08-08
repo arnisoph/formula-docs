@@ -79,37 +79,37 @@ Directory listing of https://github.com/bechtoldt/saltstack-skeleton-formula:
 Explanation
 '''''''''''
 
-``CHANGELOG.rst``: Contains a brief change log about important changes that are part of new releases.
+``CHANGELOG.rst``: SHALL contain a brief change log about important changes that are part of new releases.
 
-``LICENSE``: Contains license information and terms & conditions how you are allowed to use and distribute the files of the underlying directories.
+``LICENSE``: SHALL contain license information and terms & conditions how users are allowed to use and distribute the files of the underlying directories.
 
-``README.rst``: May contain instructions how to use the formula, compatiblity information, dependencies, TODOs, a list of contributors and links for further information. Adding a list of available states or code documentaiton tend to date out. Better spend some time making your code easy to read and add some comments for complex statements.
+``README.rst``: MAY contain instructions how to use the formula, compatiblity information, dependencies, TODOs, a list of contributors and links for further information. Adding a list of available states or code documentaiton tend to date out. Better spend some time making your code easy to read and add some comments for complex statements.
 
-``_grains/``: Contains custom grain modules that are used by Salt.
+``_grains/``: MAY contain custom grain modules that are used by Salt.
 
-``_modules/``: Contains custom execution modules that are used by Salt.
+``_modules/``: MAY contain custom execution modules that are used by Salt.
 
-``_states/``: Contains custom state modules that are used by Salt.
+``_states/``: MAY contain custom state modules that are used by Salt.
 
-``contrib/``: Contains files that are contributed by users that aren't maintained by the formulas' author(s)/ maintainer.
+``contrib/``: MAY contain files that are contributed by users that aren't maintained by the formulas' author(s)/ maintainer.
 
-``pillar_examples/``: Contains pillar examples that can be used for formula testing. This directory will be read by Salt master and minions for configuration management. Do *NEVER* store *ANY* sensitive data in this directory since it's meant to become published when submitting a pull request.
+``pillar_examples/``: SHOULD contain pillar examples that can be used for formula testing. This directory will be read by Salt master and minions for configuration management. Do *NEVER* store *ANY* sensitive data in this directory since it's meant to become published when submitting a pull request.
 
-``states/``: Contains the actual Salt state files. This directory will be read by Salt master and minions for configuration management.
+``states/``: SHOULD contain the actual Salt state files. This directory will be read by Salt master and minions for configuration management.
 
-``test/``: Contains a Vagrant-based or any other development and test environment. The Vagrant subdirectory is a Git submodule (repository) that holds a generic `Vagrant box & provision scripts <https://github.com/bechtoldt/iac-vagrant>`_. The local file ``test/nodes.yaml`` can be used to configure your Vagrant box.
+``test/``: MAY contain a Vagrant-based or any other development and test environment. The Vagrant subdirectory is a Git submodule (repository) that holds a generic `Vagrant box & provision scripts <https://github.com/bechtoldt/iac-vagrant>`_. The local file ``test/nodes.yaml`` can be used to configure your Vagrant box.
 
 
 Version Control & Release Management
 ------------------------------------
 
-FIXME: branches
+A concept of managing code in a VCS (Version Control System) would be having a *master*/*develop* branch containing the latest state of the formula code. Separate branches keep support for older Salt releases. So could create the branch of the master branch and name it ``2015.8`` when you plan to introduce changes in the master branch that require a newer version. One could backport fixes and features to these *LTS*/*support release* branches, just like the `SaltStack upstream project <https://github.com/saltstack/salt/blob/develop/doc/topics/development/conventions/release.rst>`_ is doing. A file called ``CHANGELOG.rst`` SHOULD
 
 
 Security Considerations
 -----------------------
 
-FIXME
+As mentioned above, never commit changes that include private passwords or keys that are used on your important systems. Try to separate code and data whenever it's possible. Use pillar to store this data.
 
 
 Contributing

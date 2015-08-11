@@ -93,6 +93,8 @@ Explanation
 
 ``contrib/``: MAY contain files that are contributed by users that aren't maintained by the formulas' author(s)/ maintainer.
 
+``meta.yaml``: ``FIXME``
+
 ``pillar_examples/``: SHOULD contain pillar examples that can be used for formula testing. This directory will be read by Salt master and minions for configuration management. Do *NEVER* store *ANY* sensitive data in this directory since it's meant to become published when submitting a pull request.
 
 ``states/``: SHOULD contain the actual Salt state files. This directory will be read by Salt master and minions for configuration management.
